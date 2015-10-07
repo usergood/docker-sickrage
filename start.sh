@@ -3,11 +3,11 @@
 mkdir -p /config
 mkdir -p /config/cache
 
-cd /sickrage
+cd /SickGear
 if [ -f /config/config.ini ]
 then
-	rm -rf /sickrage/config.ini
-	rm -rf /sickrage/sickbeard.db
+	rm -rf /SickGear/config.ini
+	rm -rf /SickGear/sickbeard.db
 	rm -rf /config/sickbeard.db.v32
 	rm -rf /config/sickbeard.db.v33
 	rm -rf /config/sickbeard.db.v34
@@ -37,12 +37,12 @@ else
 	touch /config/sickbeard.db.v42
 	touch /config/sickbeard.db.v43
 	touch /config/sickbeard.db.v44
-	cp -fr /sickrage/cache/* /config/cache/
-#	mv -f /sickbeard/autoprocesstv/autoProcessTV.cfg /config/autoProcessTV.cfg
+	cp -fr /SickGear/cache/* /config/cache/
+#	mv -f /SickGear/autoprocesstv/autoProcessTV.cfg /config/autoProcessTV.cfg
 fi
-ln -sf /config/config.ini /sickrage/config.ini
-ln -sf /config/sickbeard.db* /sickrage/
-#ln -sf /config/cache /sickrage/cache
-#ln -sf /config/autoProcessTV.cfg sickbeard/autoprocesstv/autoProcessTV.cfg
+ln -sf /config/config.ini /SickGear/config.ini
+ln -sf /config/sickbeard.db* /SickGear/
+#ln -sf /config/cache /SickGear/cache
+#ln -sf /config/autoProcessTV.cfg SickGear/autoprocesstv/autoProcessTV.cfg
 
 /usr/bin/python SickBeard.py
